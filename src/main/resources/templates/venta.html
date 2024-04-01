@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+    <head><meta charset="UTF-8"><title>Venta</title></head>
+
+    <body>
+    <form action="#" th:action="@{/usuario}" method="post">
+        <p>
+            <label for="email">Email de contacto: </label>
+            <input type="text" name="email" id="email" th:value="!${exito}? ${billeteVenta.email}">
+        </p>
+        <p>
+            <label for="id">Id: </label>
+            <input type="text" name="id" id="id" th:value="!${exito}? ${billeteVenta.id}">
+        </p>
+        <p>
+            <label for="pais">Pais de procedencia: </label>
+            <input type="text" name="pais" id="pais" th:value="!${exito}? ${billeteVenta.pais}">
+        </p>
+        <p>
+            <label for="año">Año de expedicion: </label>
+            <input type="number" name="año" id="año" th:value="!${exito}? ${billeteVenta.año}">
+        </p>
+        <p>
+            <label for="valor">Valor del billete: </label>
+            <input type="text" name="valor" id="valor" th:value="!${exito}? ${billeteVenta.valor}">
+        </p>
+        <p>
+            <label for="precio">Precio de venta: </label>
+            <input type="number" name="precio" id="precio" th:value="!${exito}? ${billeteVenta.precio}">
+        </p>
+
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+    <ul th:if="!${exito}">
+        <li th:each="err : ${#fields.errors('contacto.*')}" th:text="${err}"></li>
+    </ul>
+    <p th:if="${exito}" th:text="${exito}"></p>
+    </body>
+</html>
