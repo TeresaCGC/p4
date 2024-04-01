@@ -1,4 +1,4 @@
-# Backend para Página Web de Billetes Antiguos
+# Backend 
 
 Este repositorio contiene el código del backend para una página web dedicada a la gestión de billetes antiguos. El backend está desarrollado en [Java](https://www.java.com) utilizando el framework [Spring Boot](https://spring.io/projects/spring-boot).
 Forma parte de la evaluación continua de la asignatura: Programación de Aplicaciones Telemáticas.
